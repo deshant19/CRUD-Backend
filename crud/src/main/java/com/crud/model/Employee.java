@@ -20,16 +20,16 @@ public class Employee {
 
 	@Id
     @GeneratedValue
-    @Column(name = "USER_ID")
+    @Column(name = "ID")
     private Long id;
     
 	@Column(name = "FIRST_NAME")
-    private String firstname;
+    private String firstName;
     
 	
     @Column(name = "LAST_NAME")
     @NotBlank(message = "last name can't be blank")
-    private String lastname;
+    private String lastName;
   
     @Column(name = "EMAIL")
     @NotBlank(message = "Email can't be blank")
@@ -43,18 +43,18 @@ public class Employee {
 		this.id = id;
 	}
 	
-	public String getFirstname() {
-		return firstname;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	
-	public String getLastname() {
-		return lastname;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	
 	public String getEmail() {
@@ -65,7 +65,7 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", email=" + email + "]";
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
 	
    
