@@ -46,7 +46,7 @@ public class EmployeeController {
 	 ResponseEntity<Employee> createUser(@Valid @RequestBody Employee employee) throws URISyntaxException {
 	        log.info("Request to create employee: {}", employee);
 	        Employee result = employeeRepository.save(employee);
-	        return ResponseEntity.created(new URI("/api/employee/" + result.getId()))
+	        return ResponseEntity.created(new URI("/service/employee/" + result.getId()))
 	                .body(result);
 	 }
 	 
